@@ -30,15 +30,15 @@ const Podcasts = () => {
     return (
         <div> 
             {podcasts && podcasts.map ((podcast) =>
-                <h2>{podcast.title}</h2>
+                <div>
+                <img src={podcast.image} alt="logo" width="60px" />
+                <h3>{podcast.title}</h3>
+                <p>{podcast.genre}</p>
+                <p>Seasons:{podcast.seasons}</p>
+                <p>Updated date:{podcast.date}</p>
+            </div> 
             )}
-            <div>
-                <img src="logo.png" alt="logo" />
-                <h3>Title</h3>
-                <p>Genre</p>
-                <p>Seasons</p>
-                <p>Updated date</p>
-            </div>  
+             
         </div>
     );
 }
