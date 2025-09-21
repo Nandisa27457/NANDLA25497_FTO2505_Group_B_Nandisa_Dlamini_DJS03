@@ -37,7 +37,7 @@ function getGenres (genreIds){
     // Iterate over each genre ID provided in the podcast array
         genreIds.forEach(id => {
 
-    // Find the genre object in the genres list that matches the current ID
+    // Find the genre object in the genres list that matches the current ID.
             const genre = genres.find(genre => genre.id === id)
             if (genre) {
 
