@@ -3,7 +3,6 @@
    * @param {string} dateStr - ISO date string.
    * @returns {string} Formatted date string.
    */
-
 // Formats a date string to 'Month Day, Year' (e.g., September 21, 2025)
 export function formatDate(dateString) {
 	const date = new Date(dateString);
