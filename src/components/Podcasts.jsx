@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import fetchPodcasts from '../utility';
+import Podcast from './Podcast';
+import {fetchPodcasts} from '../utility';
 
 const Podcasts = () => {
     const [podcasts, setPodcasts] = useState([])
@@ -28,17 +29,10 @@ const Podcasts = () => {
         );
     }
     return (
-        <div> 
+        <div className="podcast-grid"> 
             {podcasts && podcasts.map ((podcast) =>
-                <div>
-                <img src={podcast.image} alt="logo" width="60px" />
-                <h3>{podcast.title}</h3>
-                <p>{podcast.genre}</p>
-                <p>Seasons:{podcast.seasons}</p>
-                <p>Updated date:{podcast.date}</p>
-            </div> 
+                <Podcast key={podcast.id} {...podcast} />
             )}
-             
         </div>
     );
 }

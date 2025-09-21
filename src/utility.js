@@ -1,4 +1,6 @@
-export default async function fetchPodcasts() {
+import { genres } from "../public/data";
+
+async function fetchPodcasts() {
     const response = await fetch("https://podcast-api.netlify.app/")
     if(!response.ok) {
         console.log("There was an error")
@@ -6,3 +8,15 @@ export default async function fetchPodcasts() {
     return response.json()
 }
 
+function getGenres (genreIds){
+        let genreTitles = []
+        genreIds.forEach(id => {
+            const genre = genres.find(genre => genre.id === id)
+            if (genre) {
+                genreTitles.push(genre.title)
+            }
+        });
+        return genreTitles 
+}
+
+export { fetchPodcasts, getGenres }
