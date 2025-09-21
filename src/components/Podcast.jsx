@@ -15,6 +15,5 @@ const Podcast = (podcast) => {
     );
 }
 
-console.log(Podcast);
 
 export default Podcast;
