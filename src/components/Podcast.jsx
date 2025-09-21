@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import { getGenres } from '../utility';
 import { formatDate } from '../dateutility';
 
+/**
+ * 
+ * @param {*} podcast 
+ * @returns 
+ */
+
 
 const Podcast = (podcast) => {
+
+// Render podcast details including image, title, genres, seasons, and updated date.
     return (
         <div className="podcast-card">
             <img src={podcast.image} alt="logo" width="60px" />
