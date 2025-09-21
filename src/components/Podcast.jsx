@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { getGenres } from '../utility';
+import { formatDate } from '../dateutility';
+
 
 const Podcast = (podcast) => {
     return (
@@ -8,9 +10,11 @@ const Podcast = (podcast) => {
             <h3>{podcast.title}</h3>
             <p>{getGenres(podcast.genres)}</p>
             <p>{podcast.seasons} seasons</p>
-            <p>Updated date:{podcast.date}</p>
+            <p>Updated date: {formatDate(podcast.updated)}</p>
         </div> 
- );
+    );
 }
+
+console.log(Podcast);
 
 export default Podcast;
